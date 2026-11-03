@@ -5,9 +5,13 @@ description: Configuring the TypeSafe API key for the Jev decision model.
 
 ## The decision model
 
-Cluewren uses Jev, a fast decision model from TypeSafe (`https://api.typesafe.ai`). The default model identifier is `jev-1.13.0`.
+Cluewren uses Jev, a fast decision model from TypeSafe, served at the API endpoint `https://api.typesafe.ai`. The default model identifier is `jev-1.13.0`.
 
 The Cluewren brain queries Jev at `POST /v1/systemone` to make real-time decisions during play episodes.
+
+## Getting a key
+
+API keys are issued in the TypeSafe console at [https://console.typesafe.ai/keys](https://console.typesafe.ai/keys). TypeSafe describes Jev as in early access. Pricing and available models are listed at [https://docs.typesafe.ai/models](https://docs.typesafe.ai/models). Rate limits are applied per organization; see [https://console.typesafe.ai/rate-limits](https://console.typesafe.ai/rate-limits).
 
 ## Configuring the API key
 
