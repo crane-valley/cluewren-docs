@@ -1,0 +1,59 @@
+---
+title: Cluewren
+description: Documentation for Cluewren, an automated playtesting tool for Unity, Godot, and Unreal Engine games.
+template: splash
+hero:
+  title: Cluewren
+  tagline: Playtest games open in your Unity, Godot, or Unreal editor using Claude Code or Codex.
+  actions:
+    - text: Install
+      link: /getting-started/install/
+      variant: primary
+    - text: GitHub
+      link: https://github.com/crane-valley/cluewren
+      variant: minimal
+      icon: external
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid>
+  <LinkCard
+    title="Install"
+    href="/getting-started/install/"
+    description="System requirements, building Cluewren from source, and connecting your coding agent."
+  />
+  <LinkCard
+    title="Engines"
+    href="/engines/unity/"
+    description="Plugin installation and configuration for Unity, Godot, and Unreal Engine."
+  />
+  <LinkCard
+    title="First run"
+    href="/getting-started/first-run/"
+    description="Start a playtest session with your coding agent, submit requests, and inspect run artifacts."
+  />
+</CardGrid>
+
+## Engines
+
+- [Unity](/engines/unity/): Installing the package from git or disk, bridge connection, and engine conventions.
+- [Godot](/engines/godot/): Installing the addon in addons/, debugger relay, and node paths.
+- [Unreal Engine](/engines/unreal/): Installing the plugin for C++ or Blueprint-only projects, socket architecture, and actor paths.
+
+## Guides
+
+- [Writing requests](/guides/requests/): Request kinds, time limits and budgets, and report requirements.
+- [Decision model key](/guides/decision-model-key/): Configuring the TypeSafe API key in keys.env and what is sent to Jev.
+
+## How it works
+
+- [Overview](/getting-started/overview/): What Cluewren is, audience, request kinds, and run artifacts.
+- [Architecture](/concepts/architecture/): Component coordination, bridge security, and child process isolation.
+- [Privacy](/concepts/privacy/): Local data boundaries, retained project memory, and outbound network traffic.
+- [Harness sandbox](/concepts/sandbox/): Windows AppContainer isolation, execution limits, and plain child process fallback.
+
+## Reference
+
+- [CLI](/reference/cli/): Command reference for connect, mcp, and run, along with exit codes.
+- [Harness kit](/reference/kit/): The Cluewren.Kit library, Game methods, movement controllers, and supporting types.

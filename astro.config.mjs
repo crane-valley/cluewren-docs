@@ -7,7 +7,15 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Cluewren",
+      logo: { src: "./src/assets/wren.svg", alt: "" },
       favicon: "/favicon.svg",
+      customCss: ["@fontsource-variable/recursive/mono.css", "./src/styles/custom.css"],
+      head: [
+        { tag: "meta", attrs: { property: "og:image", content: "https://docs.cluewren.dev/og.png" } },
+        { tag: "meta", attrs: { property: "og:image:width", content: "1200" } },
+        { tag: "meta", attrs: { property: "og:image:height", content: "630" } },
+        { tag: "meta", attrs: { property: "og:image:alt", content: "Cluewren documentation" } },
+      ],
       defaultLocale: "root",
       locales: {
         root: { label: "English", lang: "en" },
@@ -41,6 +49,7 @@ export default defineConfig({
           translations: { ja: "リファレンス" },
           items: ["reference/cli", "reference/kit"],
         },
+        { label: "cluewren.dev", link: "https://cluewren.dev/", attrs: { rel: "home" } },
       ],
     }),
   ],

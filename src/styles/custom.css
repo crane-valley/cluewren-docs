@@ -1,0 +1,54 @@
+:root {
+  --sl-font: "Recursive Variable";
+  --sl-font-mono: "Recursive Variable";
+  --sl-color-accent-low: #3d2a12;
+  --sl-color-accent: #f4a437;
+  --sl-color-accent-high: #fbd9a6;
+  --sl-color-black: #151a20;
+  --sl-color-gray-6: #1c2229;
+  --sl-color-gray-5: #2c333b;
+}
+
+:root[data-theme="light"] {
+  --sl-color-accent-low: #fbe3c2;
+  --sl-color-accent: #924a03;
+  --sl-color-accent-high: #6f3803;
+  --sl-color-black: #f7f9fc;
+  --sl-color-gray-7: #eef1f5;
+  --sl-color-gray-6: #e6eaef;
+}
+
+:root:lang(ja) {
+  --sl-font: "Yu Gothic UI", "Hiragino Sans", "Noto Sans JP", "Meiryo";
+}
+
+body {
+  font-variation-settings: "MONO" 0;
+}
+
+code,
+kbd,
+pre,
+.expressive-code {
+  font-variation-settings: "MONO" 1;
+}
+
+.site-title {
+  color: var(--sl-color-white);
+  font-family: "Recursive Variable", var(--sl-font-system);
+}
+
+.hero {
+  padding-block: clamp(2rem, 6vw, 4rem);
+}
+
+@media (min-width: 72rem) {
+  .card-grid:has(> :nth-child(3):last-child) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.site-title img {
+  width: 1.75rem;
+  height: auto;
+}
