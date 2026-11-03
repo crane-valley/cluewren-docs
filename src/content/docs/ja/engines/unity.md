@@ -15,7 +15,7 @@ description: Unity向けCluewrenプラグインの導入と利用方法。
 
 1. Unityでプロジェクトを開きます。
 2. Package Managerウィンドウを開きます（`Window > Package Manager`）。
-3. `+` ボタンをクリックし、**Add package from git URL...** を選択して次のように入力します。
+3. `+` ボタンをクリックし、**Install package from git URL** を選択して次のように入力します。
 
 ```text
 https://github.com/crane-valley/cluewren.git?path=plugin/unity/com.cranevalley.cluewren
@@ -23,11 +23,9 @@ https://github.com/crane-valley/cluewren.git?path=plugin/unity/com.cranevalley.c
 
 ### ローカルパスからの導入
 
-リポジトリのローカルクローンにある `plugin/unity/com.cranevalley.cluewren` を指定してインストールすることもできます。
-
-:::note
-ローカルディスクからの導入時に表示されるPackage Managerの正確なメニュー表記（「Add package from disk...」を選択して `package.json` を指定するなど）はUnityエディタの一般的な仕様であり、Cluewrenのテストでは検証されていません。
-:::
+1. Package Managerウィンドウで `+` ボタンをクリックし、**Install package from disk** を選択します。
+2. クローンの `plugin/unity/com.cranevalley.cluewren` フォルダに移動します。
+3. その `package.json` をダブルクリックします。
 
 ## brainへの接続
 

@@ -13,12 +13,23 @@ description: Installing and using the Cluewren plugin for Unreal Engine.
 
 ## Installing the plugin
 
-1. Copy the `plugin/unreal/Cluewren` directory from the repository into your project's `Plugins/Cluewren` folder (e.g. `<Project>/Plugins/Cluewren`).
-2. Build the project using your C++ development environment.
+### C++ project
 
-:::note
-Visual Studio workload configurations and the process for building plugins in Blueprint-only projects are general Unreal Engine topics and are not verified by Cluewren tests.
-:::
+Copy `plugin/unreal/Cluewren` into `<Project>/Plugins/Cluewren`, then build the project's editor target as usual.
+
+### Blueprint-only project, or no build in the project
+
+Build the plugin once with Unreal's BuildPlugin, using:
+
+```text
+"<UE>/Engine/Build/BatchFiles/RunUAT.bat" BuildPlugin -Plugin="<clone>/plugin/unreal/Cluewren/Cluewren.uplugin" -Package="<output folder>" -TargetPlatforms=Win64
+```
+
+Then copy the output folder (without its `Intermediate` folder) to `<Project>/Plugins/Cluewren`.
+
+The BuildPlugin step needs Visual Studio with the C++ toolchain Unreal requires. The project itself then needs none.
+
+Verified: the prebuilt plugin loads and runs in a Blueprint-only project (the UE 5.8 Third Person Blueprint template). The binaries must come from the same engine version.
 
 ## Connecting to the brain
 

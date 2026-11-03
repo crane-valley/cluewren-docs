@@ -15,7 +15,7 @@ description: Installing and using the Cluewren plugin for Unity.
 
 1. Open your project in Unity.
 2. Open the Package Manager window (`Window > Package Manager`).
-3. Click the `+` button, select **Add package from git URL...**, and enter:
+3. Click the `+` button, select **Install package from git URL**, and enter:
 
 ```text
 https://github.com/crane-valley/cluewren.git?path=plugin/unity/com.cranevalley.cluewren
@@ -23,11 +23,9 @@ https://github.com/crane-valley/cluewren.git?path=plugin/unity/com.cranevalley.c
 
 ### Local path
 
-You can also install the package from a local clone of the repository by referencing `plugin/unity/com.cranevalley.cluewren`.
-
-:::note
-The exact Package Manager menu labels for installing from local disk (such as selecting "Add package from disk..." and choosing `package.json`) are general Unity interface functions and are not verified by Cluewren tests.
-:::
+1. In the Package Manager window, click the `+` button and choose **Install package from disk**.
+2. Go to the clone's `plugin/unity/com.cranevalley.cluewren` folder.
+3. Double-click its `package.json`.
 
 ## Connecting to the brain
 

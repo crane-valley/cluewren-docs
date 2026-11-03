@@ -13,12 +13,23 @@ description: Unreal Engine向けCluewrenプラグインの導入と利用方法�
 
 ## プラグインのインストール
 
-1. リポジトリ内の `plugin/unreal/Cluewren` ディレクトリを、お使いのプロジェクトの `Plugins/Cluewren` フォルダ（例: `<Project>/Plugins/Cluewren`）にコピーします。
-2. C++開発環境を使用してプロジェクトをビルドします。
+### C++プロジェクト
 
-:::note
-Visual Studioのワークロード構成や、Blueprint専用プロジェクトでのプラグインビルド手順はUnreal Engineの一般的な開発知識であり、Cluewrenのテストでは検証されていません。
-:::
+`plugin/unreal/Cluewren` を `<Project>/Plugins/Cluewren` にコピーし、通常通りプロジェクトのエディタターゲットをビルドします。
+
+### Blueprint専用プロジェクト、またはプロジェクト側でビルドを行わない場合
+
+UnrealのBuildPluginを使用してプラグインを一度ビルドします。次のコマンドを使用します。
+
+```text
+"<UE>/Engine/Build/BatchFiles/RunUAT.bat" BuildPlugin -Plugin="<clone>/plugin/unreal/Cluewren/Cluewren.uplugin" -Package="<output folder>" -TargetPlatforms=Win64
+```
+
+その後、出力フォルダ（`Intermediate` フォルダを除く）を `<Project>/Plugins/Cluewren` にコピーします。
+
+BuildPluginの手順には、Unrealが必要とするC++ツールチェーンを備えたVisual Studioが必要です。プロジェクト自体には不要です。
+
+検証済み: 事前ビルドされたプラグインは、Blueprint専用プロジェクト（UE 5.8のサードパーソンBlueprintテンプレート）で読み込まれて動作します。バイナリは同一のエンジンバージョンから生成されたものである必要があります。
 
 ## brainへの接続
 
