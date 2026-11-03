@@ -5,9 +5,13 @@ description: Jev意思決定モデル向けTypeSafe APIキーの設定。
 
 ## 意思決定モデル
 
-CluewrenはTypeSafe（`https://api.typesafe.ai`）の高速な意思決定モデルであるJevを使用します。デフォルトのモデル識別子は `jev-1.13.0` です。
+CluewrenはTypeSafeがAPIエンドポイント `https://api.typesafe.ai` で提供する高速な意思決定モデルであるJevを使用します。デフォルトのモデル識別子は `jev-1.13.0` です。
 
 Cluewrenのbrainは、プレイエピソード中にリアルタイムに判断を行うため、`POST /v1/systemone` でJevに問い合わせます。
+
+## APIキーの取得
+
+APIキーはTypeSafeコンソールの [https://console.typesafe.ai/keys](https://console.typesafe.ai/keys) で発行されます。TypeSafeはJevを早期アクセスと説明しています。価格と利用可能なモデルは [https://docs.typesafe.ai/models](https://docs.typesafe.ai/models) に記載されています。レート制限は組織ごとに適用されます（[https://console.typesafe.ai/rate-limits](https://console.typesafe.ai/rate-limits) を参照）。
 
 ## APIキーの設定
 

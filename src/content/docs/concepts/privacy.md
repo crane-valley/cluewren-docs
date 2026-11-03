@@ -20,7 +20,7 @@ Your coding agent (Claude Code or OpenAI Codex) communicates with its own model 
 
 ## What remains on your machine
 
-All project analysis and run artifacts remain in local project folders:
+Cluewren keeps run data, exported project text, and captured frames on your machine:
 
 - **Run memory**: Saved inside `<project>/UserSettings/Cluewren/` (Unity), `<project>/.godot/cluewren/` (Godot), or `<project>/Saved/Cluewren/` (Unreal Engine). Contains `notes.md`, `lib.cs`, and per-run directories with `harness.cs`, `traceN.jsonl`, and `report.json`.
 - **Text codex**: The exported project text representation remains in `<project>/Library/CluewrenCodex/`, `<project>/.godot/cluewren_codex/`, or `<project>/Saved/CluewrenCodex/`.

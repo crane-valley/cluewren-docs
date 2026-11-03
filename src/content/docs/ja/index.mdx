@@ -1,0 +1,59 @@
+---
+title: Cluewren
+description: Unity、Godot、Unreal Engineのゲーム向け自動プレイテストツール、Cluewrenのドキュメント。
+template: splash
+hero:
+  title: Cluewren
+  tagline: Claude CodeやCodexを使用して、Unity、Godot、Unreal Engineのエディタで開いているゲームをプレイテストします。
+  actions:
+    - text: インストール
+      link: /ja/getting-started/install/
+      variant: primary
+    - text: GitHub
+      link: https://github.com/crane-valley/cluewren
+      variant: minimal
+      icon: external
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid>
+  <LinkCard
+    title="インストール"
+    href="/ja/getting-started/install/"
+    description="動作要件、ソースコードからのビルド手順、コーディングエージェントの接続設定。"
+  />
+  <LinkCard
+    title="エンジン"
+    href="#エンジン"
+    description="Unity、Godot、Unreal Engine向けのプラグイン導入とエンジン設定。"
+  />
+  <LinkCard
+    title="最初の実行"
+    href="/ja/getting-started/first-run/"
+    description="エージェントとのプレイテストセッションの開始、リクエストの送信、実行成果物の確認。"
+  />
+</CardGrid>
+
+## エンジン
+
+- [Unity](/ja/engines/unity/): Git URLまたはディスクからのパッケージ導入、ブリッジ接続、エンジン固有の規則。
+- [Godot](/ja/engines/godot/): addons/へのアドオン配置、デバッガ中継、ノードパス。
+- [Unreal Engine](/ja/engines/unreal/): C++およびBlueprintのみのプロジェクト向けのプラグイン導入、ソケット構成、アクターパス。
+
+## ガイド
+
+- [リクエストの記述](/ja/guides/requests/): リクエストの種別、各種制限時間と予算、レポートの要件。
+- [意思決定モデルのAPIキー](/ja/guides/decision-model-key/): keys.envでのTypeSafe APIキー設定とJevへの送信データ。
+
+## 仕組み
+
+- [概要](/ja/getting-started/overview/): Cluewrenの機能、対象ユーザー、リクエスト種別、生成される実行成果物。
+- [アーキテクチャ](/ja/concepts/architecture/): コンポーネント間の連携、ブリッジのセキュリティ、子プロセスの分離。
+- [プライバシー](/ja/concepts/privacy/): ローカル動作の境界、プロジェクト内に保持されるデータ、外部ネットワーク通信。
+- [ハーネスのサンドボックス](/ja/concepts/sandbox/): Windows AppContainerによる分離、実行制限、通常の子プロセスへのフォールバック。
+
+## リファレンス
+
+- [CLIリファレンス](/ja/reference/cli/): connect、mcp、runコマンドおよび終了コードのリファレンス。
+- [ハーネスKitリファレンス](/ja/reference/kit/): Cluewren.Kitライブラリ、Gameメソッド、移動コントローラ、サポート型。

@@ -20,7 +20,7 @@ Cluewrenのbrainが発生させる唯一の外部ネットワーク接続は、�
 
 ## ローカルマシンに残るデータ
 
-すべてのプロジェクト分析および実行成果物は、ローカルのプロジェクトフォルダ内に保持されます。
+Cluewrenが生成する実行データ、エクスポートされたプロジェクトテキスト、および記録されたフレームは、ローカルマシン上に保持されます。
 
 - **実行メモリ**: `<project>/UserSettings/Cluewren/`（Unity）、`<project>/.godot/cluewren/`（Godot）、または `<project>/Saved/Cluewren/`（Unreal Engine）に保存されます。`notes.md`、`lib.cs`、および `harness.cs`、`traceN.jsonl`、`report.json` を含む実行ごとのディレクトリが保持されます。
 - **テキストcodex**: エクスポートされたプロジェクトのテキスト表現は、`<project>/Library/CluewrenCodex/`、`<project>/.godot/cluewren_codex/`、または `<project>/Saved/CluewrenCodex/` に保存されます。
