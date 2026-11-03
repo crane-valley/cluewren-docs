@@ -21,15 +21,16 @@ The decision model requires an API key named `TYPESAFE_API_KEY`. Cluewren looks 
    Lines starting with `#` are treated as comments and ignored.
 
 :::caution
-Never paste an API key into your agent conversation. If `start_run` is called without a key, it returns instructions explaining where to save the key and instructs the agent never to ask you to paste it into the chat.
+Never paste an API key into your agent conversation. If `start_run` is called without a key, it returns instructions telling you to put the key in `keys.env` and instructs the agent never to ask you to paste it into the chat.
 :::
 
 ## Loading behavior
 
-The `cluewren mcp` server reads the key once when the process starts:
+Each `start_run` reads the key again:
 
-- Configure `TYPESAFE_API_KEY` in your environment or in `keys.env` before starting your coding agent session.
-- If you update or replace the key, start a new Claude Code or Codex session so the MCP server reloads it.
+- A key added to or changed in `%LOCALAPPDATA%\Cluewren\keys.env` takes effect on the next `start_run`, with no restart.
+- An environment variable is read from the MCP server process's own environment. One set after the agent session started takes effect only after restarting the agent session.
+- The missing-key message tells the agent to have the user put the key in `keys.env` and never paste it into chat.
 
 ## What is sent to Jev
 

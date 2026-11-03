@@ -19,6 +19,7 @@ On Windows 11, Cluewren launches the child process inside an AppContainer:
 - **Filesystem permissions**:
   - The container is granted write access only to the run folder (`spec.RunFolder`) and read-and-execute access to the child runtime copy (`%LOCALAPPDATA%\Cluewren-child\<hash>`).
   - Otherwise, the container reaches only what Windows allows AppContainer processes to reach by default.
+- **Profile lifecycle**: The brain removes the profile and its grant on the run folder when the run ends. While a container may exist, the brain holds a `.container` file in the run folder open. If the brain is killed, the next run in the same project finds that file unheld and removes the leftover profile and grant.
 
 ## Linux isolation (bubblewrap)
 
